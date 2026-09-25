@@ -39,7 +39,7 @@ chop-suey-web/
 
 | Archivo         | Lenguaje       | Función                                                        |
 |-----------------|----------------|-----------------------------------------------------------------|
-| `index.html`    | HTML5          | Estructura semántica: header, hero, especialidades, menú, footer |
+| `index.html`    | HTML5          | Estructura semántica: header, hero con pagoda temática, menú unificado, nosotros, footer |
 | `css/styles.css`| CSS3           | Paleta de colores, animaciones `@keyframes`, transiciones, responsive |
 | `js/script.js`  | JavaScript ES6 | Preloader, scroll header, tabs de menú, scroll reveal, hamburguesa |
 

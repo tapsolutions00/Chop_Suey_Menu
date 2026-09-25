@@ -44,7 +44,6 @@
 
       <nav class="nav" id="nav">
         <a href="#inicio">Inicio</a>
-        <a href="#especialidades">Especialidades</a>
         <a href="#menu">Menú</a>
         <a href="#nosotros">Nosotros</a>
         <a href="#contacto" class="nav-cta">Pedir Ahora</a>
@@ -61,12 +60,149 @@
     <div class="hero-overlay"></div>
     <div class="hero-glow"></div>
     <div class="container hero-content">
+      
+      <!-- Elemento visual temático: Pagoda China moderna y elegante -->
+      <div class="hero-pagoda-wrapper" aria-hidden="true">
+        <div class="pagoda-badge">
+          <svg class="pagoda-svg" viewBox="0 0 240 260" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pagoda China Tradicional">
+            <defs>
+              <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#fff4cf" />
+                <stop offset="35%" stop-color="#d4af37" />
+                <stop offset="100%" stop-color="#936c0d" />
+              </linearGradient>
+              <linearGradient id="roofGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#e3173a" />
+                <stop offset="50%" stop-color="#b00d27" />
+                <stop offset="100%" stop-color="#640514" />
+              </linearGradient>
+              <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#d4af37" />
+                <stop offset="50%" stop-color="#fff8db" />
+                <stop offset="100%" stop-color="#aa8018" />
+              </linearGradient>
+              <radialGradient id="haloGrad" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#c8102e" stop-opacity="0.45" />
+                <stop offset="60%" stop-color="#d4af37" stop-opacity="0.2" />
+                <stop offset="100%" stop-color="#141414" stop-opacity="0" />
+              </radialGradient>
+              <filter id="pagodaGlowFilter" x="-20%" y="-20%" width="140%" height="140%">
+                <feGaussianBlur stdDeviation="4" result="blur" />
+                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+              </filter>
+              <filter id="lanternSoftGlow" x="-30%" y="-30%" width="160%" height="160%">
+                <feGaussianBlur stdDeviation="2.5" result="blur" />
+                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+              </filter>
+            </defs>
+
+            <!-- Halo místico y aros concéntricos ceremoniales -->
+            <circle cx="120" cy="130" r="108" fill="url(#haloGrad)" />
+            <circle cx="120" cy="130" r="102" stroke="url(#goldGrad)" stroke-width="1.2" stroke-dasharray="3 6" opacity="0.65" />
+            <circle cx="120" cy="130" r="95" stroke="url(#goldGrad)" stroke-width="0.7" opacity="0.4" />
+
+            <!-- Nubes sagradas orientales en la base (Xiangyun) -->
+            <path d="M42 225 Q56 215 70 223 Q84 213 98 226 L36 226 Z" fill="url(#goldGrad)" opacity="0.3" />
+            <path d="M198 225 Q184 215 170 223 Q156 213 142 226 L204 226 Z" fill="url(#goldGrad)" opacity="0.3" />
+
+            <!-- Base ceremonial escalonada -->
+            <rect x="48" y="214" width="144" height="13" rx="3" fill="#181818" stroke="url(#goldGrad)" stroke-width="1.2" />
+            <rect x="60" y="206" width="120" height="9" rx="2" fill="#242424" stroke="url(#goldGrad)" stroke-width="1" />
+            <path d="M102 214 L138 214 L134 227 L106 227 Z" fill="url(#roofGrad)" />
+            <line x1="104" y1="218" x2="136" y2="218" stroke="url(#goldGrad)" stroke-width="1" opacity="0.75" />
+            <line x1="105" y1="222" x2="135" y2="222" stroke="url(#goldGrad)" stroke-width="1" opacity="0.75" />
+
+            <!-- NIVEL 1 (Planta Baja Imperial) -->
+            <rect x="74" y="168" width="92" height="38" fill="#121212" stroke="#8f0b20" stroke-width="1.5" />
+            <!-- Columnas lacadas rojas exteriores e interiores -->
+            <rect x="76" y="168" width="6" height="38" fill="url(#roofGrad)" stroke="url(#goldGrad)" stroke-width="0.8" />
+            <rect x="158" y="168" width="6" height="38" fill="url(#roofGrad)" stroke="url(#goldGrad)" stroke-width="0.8" />
+            <rect x="100" y="168" width="5" height="38" fill="url(#roofGrad)" stroke="url(#goldGrad)" stroke-width="0.6" opacity="0.9" />
+            <rect x="135" y="168" width="5" height="38" fill="url(#roofGrad)" stroke="url(#goldGrad)" stroke-width="0.6" opacity="0.9" />
+            <!-- Puerta ceremonial con arco oriental y remaches dorados -->
+            <path d="M108 206 L108 178 Q120 172 132 178 L132 206 Z" fill="#8f0b20" stroke="url(#goldGrad)" stroke-width="1.2" />
+            <line x1="120" y1="174" x2="120" y2="206" stroke="url(#goldGrad)" stroke-width="1" />
+            <circle cx="114" cy="183" r="1.3" fill="url(#goldGrad)" />
+            <circle cx="126" cy="183" r="1.3" fill="url(#goldGrad)" />
+            <circle cx="114" cy="191" r="1.3" fill="url(#goldGrad)" />
+            <circle cx="126" cy="191" r="1.3" fill="url(#goldGrad)" />
+            <circle cx="114" cy="199" r="1.3" fill="url(#goldGrad)" />
+            <circle cx="126" cy="199" r="1.3" fill="url(#goldGrad)" />
+
+            <!-- Techo Nivel 1 (Aleros tradicionales cóncavos con remates curvos alzados) -->
+            <path d="M40 170 Q62 167 78 151 L162 151 Q178 167 200 170 Q165 158 120 158 Q75 158 40 170 Z" fill="url(#roofGrad)" stroke="url(#goldGrad)" stroke-width="1.3" />
+            <path d="M40 170 Q30 167 26 157 Q33 164 47 167 Z" fill="url(#goldGrad)" />
+            <path d="M200 170 Q210 167 214 157 Q207 164 193 167 Z" fill="url(#goldGrad)" />
+
+            <!-- NIVEL 2 -->
+            <rect x="80" y="124" width="80" height="28" fill="#121212" stroke="#8f0b20" stroke-width="1.2" />
+            <!-- Barandilla dorada de balcón -->
+            <line x1="77" y1="149" x2="163" y2="149" stroke="url(#goldGrad)" stroke-width="1.5" />
+            <line x1="77" y1="152" x2="163" y2="152" stroke="url(#goldGrad)" stroke-width="1" />
+            <!-- Celosías tradicionales de ventanas chinas -->
+            <rect x="91" y="129" width="16" height="17" rx="1" fill="#1c1c1c" stroke="url(#goldGrad)" stroke-width="0.8" />
+            <line x1="99" y1="129" x2="99" y2="146" stroke="url(#goldGrad)" stroke-width="0.6" />
+            <line x1="91" y1="137" x2="107" y2="137" stroke="url(#goldGrad)" stroke-width="0.6" />
+            <rect x="133" y="129" width="16" height="17" rx="1" fill="#1c1c1c" stroke="url(#goldGrad)" stroke-width="0.8" />
+            <line x1="141" y1="129" x2="141" y2="146" stroke="url(#goldGrad)" stroke-width="0.6" />
+            <line x1="133" y1="137" x2="149" y2="137" stroke="url(#goldGrad)" stroke-width="0.6" />
+
+            <!-- Techo Nivel 2 (Aleros curvados) -->
+            <path d="M52 126 Q72 123 88 109 L152 109 Q168 123 188 126 Q156 114 120 114 Q84 114 52 126 Z" fill="url(#roofGrad)" stroke="url(#goldGrad)" stroke-width="1.3" />
+            <path d="M52 126 Q43 123 39 113 Q46 120 59 123 Z" fill="url(#goldGrad)" />
+            <path d="M188 126 Q197 123 201 113 Q194 120 181 123 Z" fill="url(#goldGrad)" />
+
+            <!-- NIVEL 3 -->
+            <rect x="88" y="84" width="64" height="26" fill="#121212" stroke="#8f0b20" stroke-width="1.2" />
+            <rect x="106" y="88" width="28" height="18" rx="1" fill="#1c1c1c" stroke="url(#goldGrad)" stroke-width="0.8" />
+            <circle cx="120" cy="97" r="5" stroke="url(#goldGrad)" stroke-width="0.8" fill="none" />
+            <line x1="120" y1="88" x2="120" y2="106" stroke="url(#goldGrad)" stroke-width="0.6" />
+            <line x1="106" y1="97" x2="134" y2="97" stroke="url(#goldGrad)" stroke-width="0.6" />
+
+            <!-- Techo Nivel 3 (Techo Imperial Curvado) -->
+            <path d="M64 86 Q84 83 98 67 L142 67 Q156 83 176 86 Q149 74 120 74 Q91 74 64 86 Z" fill="url(#roofGrad)" stroke="url(#goldGrad)" stroke-width="1.3" />
+            <path d="M64 86 Q55 83 51 73 Q58 80 70 83 Z" fill="url(#goldGrad)" />
+            <path d="M176 86 Q185 83 189 73 Q182 80 170 83 Z" fill="url(#goldGrad)" />
+
+            <!-- REMATE SUPERIOR / AGUJA IMPERIAL (Finial Celestial) -->
+            <path d="M110 67 L120 48 L130 67 Z" fill="url(#roofGrad)" stroke="url(#goldGrad)" stroke-width="1" />
+            <line x1="120" y1="48" x2="120" y2="18" stroke="url(#goldGrad)" stroke-width="2.6" stroke-linecap="round" />
+            <circle cx="120" cy="40" r="4.2" fill="url(#goldGrad)" />
+            <circle cx="120" cy="30" r="3.4" fill="url(#goldGrad)" />
+            <circle cx="120" cy="21" r="2.6" fill="url(#goldGrad)" />
+            <circle cx="120" cy="14" r="5" fill="url(#accentGrad)" filter="url(#pagodaGlowFilter)" />
+
+            <!-- LINTERNAS CHINAS COLGANTES (con suave balanceo y resplandor) -->
+            <g class="pagoda-lantern lantern-l1">
+              <line x1="29" y1="162" x2="29" y2="175" stroke="url(#goldGrad)" stroke-width="1" />
+              <ellipse cx="29" cy="182" rx="5.5" ry="7" fill="#e3173a" stroke="url(#goldGrad)" stroke-width="0.8" filter="url(#lanternSoftGlow)" />
+              <line x1="29" y1="189" x2="29" y2="197" stroke="url(#goldGrad)" stroke-width="1.2" />
+            </g>
+            <g class="pagoda-lantern lantern-r1">
+              <line x1="211" y1="162" x2="211" y2="175" stroke="url(#goldGrad)" stroke-width="1" />
+              <ellipse cx="211" cy="182" rx="5.5" ry="7" fill="#e3173a" stroke="url(#goldGrad)" stroke-width="0.8" filter="url(#lanternSoftGlow)" />
+              <line x1="211" y1="189" x2="211" y2="197" stroke="url(#goldGrad)" stroke-width="1.2" />
+            </g>
+            <g class="pagoda-lantern lantern-l2">
+              <line x1="42" y1="118" x2="42" y2="129" stroke="url(#goldGrad)" stroke-width="0.8" />
+              <ellipse cx="42" cy="135" rx="4.8" ry="6" fill="#e3173a" stroke="url(#goldGrad)" stroke-width="0.8" />
+              <line x1="42" y1="141" x2="42" y2="148" stroke="url(#goldGrad)" stroke-width="1" />
+            </g>
+            <g class="pagoda-lantern lantern-r2">
+              <line x1="198" y1="118" x2="198" y2="129" stroke="url(#goldGrad)" stroke-width="0.8" />
+              <ellipse cx="198" cy="135" rx="4.8" ry="6" fill="#e3173a" stroke="url(#goldGrad)" stroke-width="0.8" />
+              <line x1="198" y1="141" x2="198" y2="148" stroke="url(#goldGrad)" stroke-width="1" />
+            </g>
+          </svg>
+        </div>
+      </div>
+
       <p class="hero-kicker">Sabor auténtico desde nuestra cocina</p>
       <h1 class="hero-title">Comida China e Internacional <span>que enamora</span></h1>
       <p class="hero-desc">Wok a fuego alto, ingredientes frescos y recetas tradicionales. Descubre por qué somos el favorito de Nicaragua.</p>
       <div class="hero-actions">
-        <a href="#especialidades" class="btn btn-primary">Ver Especialidades</a>
-        <a href="#menu" class="btn btn-outline">Explorar Menú Completo</a>
+        <a href="#menu" class="btn btn-primary">Explorar Menú Completo</a>
+        <a href="#contacto" class="btn btn-outline">Hacer Pedido</a>
       </div>
     </div>
     <div class="scroll-indicator">
@@ -75,120 +211,19 @@
     </div>
   </section>
 
-  <!-- ============ ESPECIALIDADES (Platillos con animación de desglose) ============ -->
-  <section class="specialties" id="especialidades">
-    <div class="container">
-      <div class="section-heading">
-        <p class="section-kicker">Lo más pedido</p>
-        <h2>Nuestras Especialidades</h2>
-        <p class="section-desc">Pasa el cursor sobre cada platillo y descubre cada ingrediente en acción.</p>
-      </div>
-
-      <div class="dish-grid">
-
-        <!-- PLATILLO 1 -->
-        <article class="dish-card" data-dish="1">
-          <div class="dish-media">
-            <div class="steam"><span></span><span></span><span></span></div>
-            <div class="dish-layers">
-              <img class="layer layer-base" src="assets/img/platillos/tallarin-camaron.jpg" alt="Tallarín salteado con camarones" />
-              <img class="layer layer-top" src="assets/img/platillos/tallarin-camaron-top.png" alt="" />
-              <img class="layer layer-shrimp" src="assets/img/platillos/tallarin-camaron-camarones.png" alt="" />
-              <img class="layer layer-veggies" src="assets/img/platillos/tallarin-camaron-vegetales.png" alt="" />
-            </div>
-            <span class="dish-badge">Más pedido</span>
-          </div>
-          <div class="dish-info">
-            <div class="dish-title-row">
-              <h3>Tallarín Saltado con Camarones</h3>
-              <span class="dish-price">C$ 285</span>
-            </div>
-            <p class="dish-desc">Fideos de trigo salteados al wok con camarones jumbo, zanahoria, repollo y un toque de salsa de soya tostada.</p>
-            <button class="btn-add">Agregar al pedido</button>
-          </div>
-        </article>
-
-        <!-- PLATILLO 2 -->
-        <article class="dish-card" data-dish="2">
-          <div class="dish-media">
-            <div class="steam"><span></span><span></span><span></span></div>
-            <div class="dish-layers">
-              <img class="layer layer-base" src="assets/img/platillos/chowmein-mixto.jpg" alt="Chow Mein mixto" />
-              <img class="layer layer-top" src="assets/img/platillos/chowmein-mixto-top.png" alt="" />
-              <img class="layer layer-shrimp" src="assets/img/platillos/chowmein-mixto-carne.png" alt="" />
-              <img class="layer layer-veggies" src="assets/img/platillos/chowmein-mixto-vegetales.png" alt="" />
-            </div>
-            <span class="dish-badge dish-badge-spicy">Picante</span>
-          </div>
-          <div class="dish-info">
-            <div class="dish-title-row">
-              <h3>Chow Mein Mixto</h3>
-              <span class="dish-price">C$ 310</span>
-            </div>
-            <p class="dish-desc">Combinación de pollo, cerdo y camarón salteados con fideos crocantes, pimientos y zanahoria en salsa especial de la casa.</p>
-            <button class="btn-add">Agregar al pedido</button>
-          </div>
-        </article>
-
-        <!-- PLATILLO 3 -->
-        <article class="dish-card" data-dish="3">
-          <div class="dish-media">
-            <div class="steam"><span></span><span></span><span></span></div>
-            <div class="dish-layers">
-              <img class="layer layer-base" src="assets/img/platillos/arroz-frito.jpg" alt="Arroz frito especial" />
-              <img class="layer layer-top" src="assets/img/platillos/arroz-frito-top.png" alt="" />
-              <img class="layer layer-shrimp" src="assets/img/platillos/arroz-frito-camarones.png" alt="" />
-              <img class="layer layer-veggies" src="assets/img/platillos/arroz-frito-vegetales.png" alt="" />
-            </div>
-            <span class="dish-badge">Recomendado</span>
-          </div>
-          <div class="dish-info">
-            <div class="dish-title-row">
-              <h3>Arroz Frito Especial</h3>
-              <span class="dish-price">C$ 260</span>
-            </div>
-            <p class="dish-desc">Arroz salteado al wok con huevo, camarón, cerdo asado y vegetales frescos picados finamente, sazonado al estilo cantonés.</p>
-            <button class="btn-add">Agregar al pedido</button>
-          </div>
-        </article>
-
-        <!-- PLATILLO 4 -->
-        <article class="dish-card" data-dish="4">
-          <div class="dish-media">
-            <div class="steam"><span></span><span></span><span></span></div>
-            <div class="dish-layers">
-              <img class="layer layer-base" src="assets/img/platillos/tallarin-pollo.jpg" alt="Tallarín con pollo y vegetales" />
-              <img class="layer layer-top" src="assets/img/platillos/tallarin-pollo-top.png" alt="" />
-              <img class="layer layer-shrimp" src="assets/img/platillos/tallarin-pollo-carne.png" alt="" />
-              <img class="layer layer-veggies" src="assets/img/platillos/tallarin-pollo-vegetales.png" alt="" />
-            </div>
-            <span class="dish-badge dish-badge-new">Nuevo</span>
-          </div>
-          <div class="dish-info">
-            <div class="dish-title-row">
-              <h3>Tallarín de Pollo Cantonés</h3>
-              <span class="dish-price">C$ 275</span>
-            </div>
-            <p class="dish-desc">Fideos suaves salteados con tiras de pollo marinado, zanahoria, apio y brotes de soya en salsa cantonesa ligera.</p>
-            <button class="btn-add">Agregar al pedido</button>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ MENÚ COMPLETO ============ -->
+  <!-- ============ MENÚ COMPLETO (Vista Unificada Consolidada) ============ -->
   <section class="menu-section" id="menu">
     <div class="container">
       <div class="section-heading light">
-        <p class="section-kicker">Carta completa</p>
-        <h2>Nuestro Menú</h2>
-        <p class="section-desc">Filtra por categoría y encuentra tu platillo favorito.</p>
+        <p class="section-kicker">Carta consolidada</p>
+        <h2>Nuestro Menú Completo</h2>
+        <p class="section-desc">Todos nuestros platillos reunidos en una única vista general. Explora todo el menú o filtra por categoría.</p>
       </div>
 
+      <!-- Filtros de categoría: 'Todos' activo por defecto, sin categoría 'especialidades' -->
       <div class="menu-tabs" id="menuTabs">
-        <button class="tab-btn active" data-tab="entradas">Entradas</button>
+        <button class="tab-btn active" data-tab="todos">Todos</button>
+        <button class="tab-btn" data-tab="entradas">Entradas</button>
         <button class="tab-btn" data-tab="arroces">Arroces</button>
         <button class="tab-btn" data-tab="tallarines">Tallarines</button>
         <button class="tab-btn" data-tab="bebidas">Bebidas</button>
@@ -196,99 +231,229 @@
 
       <div class="menu-panels">
 
+        <!-- CATEGORÍA: ENTRADAS -->
         <div class="menu-panel active" data-panel="entradas">
-          <div class="menu-item">
-            <div class="menu-item-info">
-              <h4>Rollitos Primavera <span>(4 uds)</span></h4>
-              <p>Crujientes rollitos rellenos de repollo, zanahoria y vermicelli, servidos con salsa agridulce.</p>
+          <div class="category-header">
+            <span class="category-icon">🥢</span>
+            <div class="category-title-wrap">
+              <h3>Entradas & Aperitivos</h3>
+              <p>El comienzo perfecto para tu experiencia oriental</p>
             </div>
-            <span class="menu-item-price">C$ 120</span>
           </div>
-          <div class="menu-item">
-            <div class="menu-item-info">
-              <h4>Sopa Wantán</h4>
-              <p>Caldo aromático con wantanes rellenos de cerdo y camarón, cebollín fresco.</p>
+          <div class="menu-list">
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Rollitos Primavera <span>(4 uds)</span></h4>
+                <p>Crujientes rollitos rellenos de repollo, zanahoria y vermicelli, servidos con salsa agridulce casera.</p>
+              </div>
+              <div class="menu-item-action">
+                <span class="menu-item-price">C$ 120</span>
+                <button class="btn-add btn-add-compact" aria-label="Agregar Rollitos Primavera al pedido">Agregar</button>
+              </div>
             </div>
-            <span class="menu-item-price">C$ 140</span>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-info">
-              <h4>Alitas Agridulces</h4>
-              <p>Alitas de pollo fritas bañadas en salsa agridulce casera y ajonjolí tostado.</p>
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Sopa Wantán</h4>
+                <p>Caldo aromático tradicional con wantanes rellenos de cerdo y camarón, cebollín fresco y aceite de ajonjolí.</p>
+              </div>
+              <div class="menu-item-action">
+                <span class="menu-item-price">C$ 140</span>
+                <button class="btn-add btn-add-compact" aria-label="Agregar Sopa Wantán al pedido">Agregar</button>
+              </div>
             </div>
-            <span class="menu-item-price">C$ 175</span>
-          </div>
-        </div>
-
-        <div class="menu-panel" data-panel="arroces">
-          <div class="menu-item">
-            <div class="menu-item-info">
-              <h4>Arroz Frito Especial</h4>
-              <p>Huevo, camarón, cerdo asado y vegetales salteados al wok.</p>
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Alitas Agridulces</h4>
+                <p>Alitas de pollo fritas bañadas en salsa agridulce especial de la casa y ajonjolí tostado.</p>
+              </div>
+              <div class="menu-item-action">
+                <span class="menu-item-price">C$ 175</span>
+                <button class="btn-add btn-add-compact" aria-label="Agregar Alitas Agridulces al pedido">Agregar</button>
+              </div>
             </div>
-            <span class="menu-item-price">C$ 260</span>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-info">
-              <h4>Arroz Frito de Pollo</h4>
-              <p>Arroz salteado con pollo marinado, huevo y vegetales frescos.</p>
-            </div>
-            <span class="menu-item-price">C$ 220</span>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-info">
-              <h4>Arroz Chop Suey</h4>
-              <p>Arroz blanco acompañado de vegetales salteados y proteína a elección en salsa espesa.</p>
-            </div>
-            <span class="menu-item-price">C$ 245</span>
           </div>
         </div>
 
-        <div class="menu-panel" data-panel="tallarines">
-          <div class="menu-item">
-            <div class="menu-item-info">
-              <h4>Tallarín Saltado con Camarones</h4>
-              <p>Fideos de trigo salteados al wok con camarones jumbo y vegetales.</p>
+        <!-- CATEGORÍA: ARROCES (Incluye el platillo reubicado de especialidades) -->
+        <div class="menu-panel active" data-panel="arroces">
+          <div class="category-header">
+            <span class="category-icon">🍚</span>
+            <div class="category-title-wrap">
+              <h3>Arroces Salteados al Wok</h3>
+              <p>Granos sueltos, fuego vivo y sazón cantonesa inigualable</p>
             </div>
-            <span class="menu-item-price">C$ 285</span>
           </div>
-          <div class="menu-item">
-            <div class="menu-item-info">
-              <h4>Chow Mein Mixto</h4>
-              <p>Pollo, cerdo y camarón con fideos crocantes en salsa especial.</p>
-            </div>
-            <span class="menu-item-price">C$ 310</span>
+
+          <!-- Platillo estrella reubicado con interactividad completa y capas -->
+          <div class="dish-grid">
+            <article class="dish-card" data-dish="3">
+              <div class="dish-media">
+                <div class="steam"><span></span><span></span><span></span></div>
+                <div class="dish-layers">
+                  <img class="layer layer-base" src="assets/img/platillos/arroz-frito.jpg" alt="Arroz frito especial" />
+                  <img class="layer layer-top" src="assets/img/platillos/arroz-frito-top.png" alt="" />
+                  <img class="layer layer-shrimp" src="assets/img/platillos/arroz-frito-camarones.png" alt="" />
+                  <img class="layer layer-veggies" src="assets/img/platillos/arroz-frito-vegetales.png" alt="" />
+                </div>
+                <span class="dish-badge">Recomendado</span>
+              </div>
+              <div class="dish-info">
+                <div class="dish-title-row">
+                  <h3>Arroz Frito Especial</h3>
+                  <span class="dish-price">C$ 260</span>
+                </div>
+                <p class="dish-desc">Arroz salteado al wok con huevo, camarón, cerdo asado y vegetales frescos picados finamente, sazonado al estilo cantonés.</p>
+                <button class="btn-add">Agregar al pedido</button>
+              </div>
+            </article>
           </div>
-          <div class="menu-item">
-            <div class="menu-item-info">
-              <h4>Tallarín de Pollo Cantonés</h4>
-              <p>Fideos suaves con pollo marinado y vegetales en salsa cantonesa.</p>
+
+          <div class="menu-list">
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Arroz Frito de Pollo</h4>
+                <p>Arroz salteado al wok con pechuga de pollo marinada, huevo, cebollín y vegetales frescos.</p>
+              </div>
+              <div class="menu-item-action">
+                <span class="menu-item-price">C$ 220</span>
+                <button class="btn-add btn-add-compact" aria-label="Agregar Arroz Frito de Pollo al pedido">Agregar</button>
+              </div>
             </div>
-            <span class="menu-item-price">C$ 275</span>
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Arroz Chop Suey</h4>
+                <p>Arroz blanco acompañado de mezcla de vegetales salteados y proteína a elección en salsa espesa tradicional.</p>
+              </div>
+              <div class="menu-item-action">
+                <span class="menu-item-price">C$ 245</span>
+                <button class="btn-add btn-add-compact" aria-label="Agregar Arroz Chop Suey al pedido">Agregar</button>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="menu-panel" data-panel="bebidas">
-          <div class="menu-item">
-            <div class="menu-item-info">
-              <h4>Té Verde Helado</h4>
-              <p>Refrescante té verde servido con hielo y un toque de limón.</p>
+        <!-- CATEGORÍA: TALLARINES (Incluye los platillos reubicados de especialidades) -->
+        <div class="menu-panel active" data-panel="tallarines">
+          <div class="category-header">
+            <span class="category-icon">🍜</span>
+            <div class="category-title-wrap">
+              <h3>Tallarines & Fideos Tradicionales</h3>
+              <p>Fideos artesanales salteados con vegetales crocantes y salsas maestras</p>
             </div>
-            <span class="menu-item-price">C$ 60</span>
           </div>
-          <div class="menu-item">
-            <div class="menu-item-info">
-              <h4>Limonada de Jengibre</h4>
-              <p>Bebida cítrica con un toque picante de jengibre fresco.</p>
-            </div>
-            <span class="menu-item-price">C$ 65</span>
+
+          <!-- Platillos estrella reubicados con interactividad completa y capas -->
+          <div class="dish-grid">
+
+            <!-- Platillo 1 -->
+            <article class="dish-card" data-dish="1">
+              <div class="dish-media">
+                <div class="steam"><span></span><span></span><span></span></div>
+                <div class="dish-layers">
+                  <img class="layer layer-base" src="assets/img/platillos/tallarin-camaron.jpg" alt="Tallarín salteado con camarones" />
+                  <img class="layer layer-top" src="assets/img/platillos/tallarin-camaron-top.png" alt="" />
+                  <img class="layer layer-shrimp" src="assets/img/platillos/tallarin-camaron-camarones.png" alt="" />
+                  <img class="layer layer-veggies" src="assets/img/platillos/tallarin-camaron-vegetales.png" alt="" />
+                </div>
+                <span class="dish-badge">Más pedido</span>
+              </div>
+              <div class="dish-info">
+                <div class="dish-title-row">
+                  <h3>Tallarín Saltado con Camarones</h3>
+                  <span class="dish-price">C$ 285</span>
+                </div>
+                <p class="dish-desc">Fideos de trigo salteados al wok con camarones jumbo, zanahoria, repollo y un toque de salsa de soya tostada.</p>
+                <button class="btn-add">Agregar al pedido</button>
+              </div>
+            </article>
+
+            <!-- Platillo 2 -->
+            <article class="dish-card" data-dish="2">
+              <div class="dish-media">
+                <div class="steam"><span></span><span></span><span></span></div>
+                <div class="dish-layers">
+                  <img class="layer layer-base" src="assets/img/platillos/chowmein-mixto.jpg" alt="Chow Mein mixto" />
+                  <img class="layer layer-top" src="assets/img/platillos/chowmein-mixto-top.png" alt="" />
+                  <img class="layer layer-shrimp" src="assets/img/platillos/chowmein-mixto-carne.png" alt="" />
+                  <img class="layer layer-veggies" src="assets/img/platillos/chowmein-mixto-vegetales.png" alt="" />
+                </div>
+                <span class="dish-badge dish-badge-spicy">Picante</span>
+              </div>
+              <div class="dish-info">
+                <div class="dish-title-row">
+                  <h3>Chow Mein Mixto</h3>
+                  <span class="dish-price">C$ 310</span>
+                </div>
+                <p class="dish-desc">Combinación de pollo, cerdo y camarón salteados con fideos crocantes, pimientos y zanahoria en salsa especial de la casa.</p>
+                <button class="btn-add">Agregar al pedido</button>
+              </div>
+            </article>
+
+            <!-- Platillo 4 -->
+            <article class="dish-card" data-dish="4">
+              <div class="dish-media">
+                <div class="steam"><span></span><span></span><span></span></div>
+                <div class="dish-layers">
+                  <img class="layer layer-base" src="assets/img/platillos/tallarin-pollo.jpg" alt="Tallarín con pollo y vegetales" />
+                  <img class="layer layer-top" src="assets/img/platillos/tallarin-pollo-top.png" alt="" />
+                  <img class="layer layer-shrimp" src="assets/img/platillos/tallarin-pollo-carne.png" alt="" />
+                  <img class="layer layer-veggies" src="assets/img/platillos/tallarin-pollo-vegetales.png" alt="" />
+                </div>
+                <span class="dish-badge dish-badge-new">Nuevo</span>
+              </div>
+              <div class="dish-info">
+                <div class="dish-title-row">
+                  <h3>Tallarín de Pollo Cantonés</h3>
+                  <span class="dish-price">C$ 275</span>
+                </div>
+                <p class="dish-desc">Fideos suaves salteados con tiras de pollo marinado, zanahoria, apio y brotes de soya en salsa cantonesa ligera.</p>
+                <button class="btn-add">Agregar al pedido</button>
+              </div>
+            </article>
+
           </div>
-          <div class="menu-item">
-            <div class="menu-item-info">
-              <h4>Gaseosa</h4>
-              <p>Variedad de gaseosas frías (Coca-Cola, Sprite, Fanta).</p>
+        </div>
+
+        <!-- CATEGORÍA: BEBIDAS -->
+        <div class="menu-panel active" data-panel="bebidas">
+          <div class="category-header">
+            <span class="category-icon">🍵</span>
+            <div class="category-title-wrap">
+              <h3>Bebidas & Refrescos</h3>
+              <p>Acompañamientos frescos y tradicionales</p>
             </div>
-            <span class="menu-item-price">C$ 45</span>
+          </div>
+          <div class="menu-list">
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Té Verde Helado</h4>
+                <p>Refrescante té verde natural servido con hielo y un toque cítrico de limón.</p>
+              </div>
+              <div class="menu-item-action">
+                <span class="menu-item-price">C$ 60</span>
+                <button class="btn-add btn-add-compact" aria-label="Agregar Té Verde Helado al pedido">Agregar</button>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Limonada de Jengibre</h4>
+                <p>Bebida cítrica revitalizante con un toque picante y aromático de jengibre fresco.</p>
+              </div>
+              <div class="menu-item-action">
+                <span class="menu-item-price">C$ 65</span>
+                <button class="btn-add btn-add-compact" aria-label="Agregar Limonada de Jengibre al pedido">Agregar</button>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item-info">
+                <h4>Gaseosa</h4>
+                <p>Variedad de gaseosas frías de lata (Coca-Cola, Sprite, Fanta, Coca-Cola Zero).</p>
+              </div>
+              <div class="menu-item-action">
+                <span class="menu-item-price">C$ 45</span>
+                <button class="btn-add btn-add-compact" aria-label="Agregar Gaseosa al pedido">Agregar</button>
+              </div>
+            </div>
           </div>
         </div>
 

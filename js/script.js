@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* ---------------------------------------------------------
-     4. TABS DEL MENÚ (Entradas, Arroces, Tallarines, Bebidas)
+     4. TABS DEL MENÚ (Todos, Entradas, Arroces, Tallarines, Bebidas)
   --------------------------------------------------------- */
   const tabButtons = document.querySelectorAll('.tab-btn');
   const panels = document.querySelectorAll('.menu-panel');
@@ -70,13 +70,17 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.classList.add('active');
 
       panels.forEach(panel => {
-        panel.classList.toggle('active', panel.dataset.panel === target);
+        if (target === 'todos') {
+          panel.classList.add('active');
+        } else {
+          panel.classList.toggle('active', panel.dataset.panel === target);
+        }
       });
     });
   });
 
   /* ---------------------------------------------------------
-     5. ANIMACIÓN DE INGREDIENTES AL AGREGAR AL PEDIDO
+     5. ANIMACIÓN DE PLATILLOS AL AGREGAR AL PEDIDO
      (feedback visual en el botón)
   --------------------------------------------------------- */
   const addButtons = document.querySelectorAll('.btn-add');
@@ -86,10 +90,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const originalText = btn.textContent;
       btn.textContent = '✓ Agregado';
       btn.style.background = '#1f7a3d';
+      btn.style.borderColor = '#1f7a3d';
 
       setTimeout(() => {
         btn.textContent = originalText;
         btn.style.background = '';
+        btn.style.borderColor = '';
       }, 1400);
     });
   });
@@ -98,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
      6. SCROLL REVEAL (aparición suave de secciones)
   --------------------------------------------------------- */
   const revealTargets = document.querySelectorAll(
-    '.dish-card, .section-heading, .about-grid, .menu-tabs'
+    '.dish-card, .section-heading, .about-grid, .menu-tabs, .category-header, .menu-item'
   );
 
   revealTargets.forEach(el => el.classList.add('reveal'));
@@ -110,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
         revealObserver.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.15 });
+  }, { threshold: 0.12 });
 
   revealTargets.forEach(el => revealObserver.observe(el));
 

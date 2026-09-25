@@ -329,8 +329,84 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.2; }
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 700px;
+  max-width: 720px;
   padding-top: 100px;
+}
+
+/* ============================================================
+   HERO PAGODA EMBLEM (Temática Pagoda China Moderna y Elegante)
+============================================================ */
+.hero-pagoda-wrapper {
+  margin-bottom: 22px;
+  display: inline-block;
+  animation: fadeInUp 0.8s ease forwards;
+  opacity: 0;
+  animation-delay: 0.15s;
+}
+
+.pagoda-badge {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(200, 16, 46, 0.28) 0%, rgba(20, 20, 20, 0.75) 68%, transparent 100%);
+  box-shadow: 0 0 35px rgba(212, 175, 55, 0.28), inset 0 0 25px rgba(200, 16, 46, 0.35);
+  animation: pagodaFloat 5.5s ease-in-out infinite, pagodaGlow 4s ease-in-out infinite alternate;
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  backdrop-filter: blur(4px);
+}
+
+.pagoda-svg {
+  width: 145px;
+  height: 155px;
+  display: block;
+  filter: drop-shadow(0 10px 22px rgba(0, 0, 0, 0.6));
+  transition: transform var(--transition);
+}
+
+.pagoda-badge:hover .pagoda-svg {
+  transform: scale(1.05);
+}
+
+/* Balanceo suave de las linternas chinas tradicionales */
+.pagoda-lantern {
+  transform-origin: 50% 0;
+}
+
+.lantern-l1, .lantern-l2 {
+  animation: lanternSwayLeft 3.4s ease-in-out infinite alternate;
+}
+
+.lantern-r1, .lantern-r2 {
+  animation: lanternSwayRight 3.4s ease-in-out infinite alternate;
+}
+
+@keyframes pagodaFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes pagodaGlow {
+  0% {
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.2), inset 0 0 18px rgba(200, 16, 46, 0.25);
+    border-color: rgba(212, 175, 55, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 45px rgba(212, 175, 55, 0.45), inset 0 0 30px rgba(200, 16, 46, 0.45);
+    border-color: rgba(212, 175, 55, 0.65);
+  }
+}
+
+@keyframes lanternSwayLeft {
+  0% { transform: rotate(-3deg); }
+  100% { transform: rotate(4deg); }
+}
+
+@keyframes lanternSwayRight {
+  0% { transform: rotate(3deg); }
+  100% { transform: rotate(-4deg); }
 }
 
 .hero-kicker {
@@ -489,31 +565,130 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.2; }
 }
 
 /* ============================================================
-   ESPECIALIDADES / DISH CARDS
+   MENU SECTION (Carta Unificada Consolidada)
 ============================================================ */
-.specialties {
-  padding: 110px 0 100px;
-  background: var(--crema);
+.menu-section {
+  padding: 100px 0;
+  background: var(--negro);
+  position: relative;
 }
 
+.menu-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.tab-btn {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.22);
+  color: rgba(255,255,255,0.75);
+  padding: 11px 24px;
+  border-radius: 30px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tab-btn:hover {
+  border-color: var(--oro);
+  color: var(--blanco);
+  transform: translateY(-2px);
+}
+
+.tab-btn.active {
+  background: var(--rojo);
+  border-color: var(--rojo);
+  color: var(--blanco);
+  box-shadow: 0 6px 18px rgba(200, 16, 46, 0.45);
+}
+
+.menu-panels {
+  max-width: 980px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+}
+
+.menu-panel {
+  display: none;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.menu-panel.active {
+  display: flex;
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+/* Encabezados de categoría dentro de la vista unificada */
+.category-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.22);
+  position: relative;
+}
+
+.category-header::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: var(--oro);
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+}
+
+.category-icon {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.category-title-wrap h3 {
+  font-size: 1.35rem;
+  color: var(--blanco);
+  letter-spacing: 0.5px;
+}
+
+.category-title-wrap p {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 3px;
+}
+
+/* Grilla de platillos fotográficos (reubicados de especialidades) */
 .dish-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 34px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+  margin-top: 6px;
 }
 
 .dish-card {
-  background: var(--blanco);
+  background: #1a1a1a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius);
   overflow: hidden;
-  box-shadow: var(--shadow-soft);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
   transition: var(--transition);
   position: relative;
 }
 
 .dish-card:hover {
-  transform: translateY(-10px);
-  box-shadow: var(--shadow-strong);
+  transform: translateY(-8px);
+  border-color: rgba(212, 175, 55, 0.35);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.7), 0 0 25px rgba(200, 16, 46, 0.25);
 }
 
 .dish-media {
@@ -539,12 +714,13 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.2; }
   border-radius: 30px;
   z-index: 5;
   text-transform: uppercase;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .dish-badge-spicy { background: var(--rojo-oscuro); }
 .dish-badge-new { background: var(--oro); color: var(--negro); }
 
-/* --- Efecto de vapor (steam) --- */
+/* --- Efecto de vapor animado --- */
 .steam {
   position: absolute;
   top: 10px;
@@ -622,10 +798,8 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.2; }
   filter: brightness(0.85);
 }
 
-/* Al quitar el hover, todo regresa suavemente a su lugar original (una sola pieza) */
-
 .dish-info {
-  padding: 24px 26px 28px;
+  padding: 22px 24px 26px;
 }
 
 .dish-title-row {
@@ -638,7 +812,7 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.2; }
 
 .dish-title-row h3 {
   font-size: 1.15rem;
-  color: var(--negro);
+  color: var(--blanco);
 }
 
 .dish-price {
@@ -653,18 +827,18 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.2; }
 }
 
 .dish-desc {
-  color: var(--gris-texto);
+  color: rgba(255, 255, 255, 0.7);
   font-size: 0.88rem;
   line-height: 1.6;
   margin-bottom: 20px;
 }
 
-.btn-add {
+.dish-card .btn-add {
   width: 100%;
   padding: 12px;
-  background: var(--negro);
+  background: var(--rojo);
   color: var(--blanco);
-  border: none;
+  border: 1px solid transparent;
   border-radius: 30px;
   font-family: var(--font-body);
   font-weight: 600;
@@ -673,65 +847,18 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.2; }
   transition: var(--transition);
 }
 
-.btn-add:hover {
-  background: var(--rojo);
+.dish-card .btn-add:hover {
+  background: var(--rojo-claro);
+  box-shadow: 0 6px 18px rgba(200, 16, 46, 0.45);
   letter-spacing: 0.5px;
 }
 
-/* ============================================================
-   MENU SECTION (tabs)
-============================================================ */
-.menu-section {
-  padding: 100px 0;
-  background: var(--negro);
-  position: relative;
-}
-
-.menu-tabs {
+/* Lista de ítems tradicionales del menú */
+.menu-list {
   display: flex;
-  justify-content: center;
-  gap: 14px;
-  flex-wrap: wrap;
-  margin-bottom: 46px;
-}
-
-.tab-btn {
-  background: transparent;
-  border: 1px solid rgba(255,255,255,0.25);
-  color: rgba(255,255,255,0.7);
-  padding: 11px 26px;
-  border-radius: 30px;
-  font-family: var(--font-body);
-  font-weight: 500;
-  cursor: pointer;
-  transition: var(--transition);
-}
-
-.tab-btn:hover {
-  border-color: var(--rojo-claro);
-  color: var(--blanco);
-}
-
-.tab-btn.active {
-  background: var(--rojo);
-  border-color: var(--rojo);
-  color: var(--blanco);
-}
-
-.menu-panels {
-  max-width: 760px;
-  margin: 0 auto;
-}
-
-.menu-panel {
-  display: none;
   flex-direction: column;
-  gap: 20px;
-}
-
-.menu-panel.active {
-  display: flex;
-  animation: fadeInUp 0.5s ease forwards;
+  gap: 14px;
+  margin-top: 8px;
 }
 
 .menu-item {
@@ -739,14 +866,27 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.2; }
   justify-content: space-between;
   align-items: center;
   gap: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px dashed rgba(255,255,255,0.15);
+  padding: 18px 22px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 14px;
+  transition: var(--transition);
+}
+
+.menu-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(212, 175, 55, 0.3);
+  transform: translateX(4px);
+}
+
+.menu-item-info {
+  flex: 1;
 }
 
 .menu-item-info h4 {
   color: var(--blanco);
   font-size: 1.05rem;
-  margin-bottom: 6px;
+  margin-bottom: 5px;
 }
 
 .menu-item-info h4 span {
@@ -754,19 +894,46 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.2; }
   font-weight: 400;
   font-size: 0.8rem;
   color: var(--rojo-claro);
+  margin-left: 6px;
 }
 
 .menu-item-info p {
-  color: rgba(255,255,255,0.55);
+  color: rgba(255, 255, 255, 0.6);
   font-size: 0.85rem;
-  max-width: 480px;
+  line-height: 1.5;
+  max-width: 520px;
+}
+
+.menu-item-action {
+  display: flex;
+  align-items: center;
+  gap: 14px;
 }
 
 .menu-item-price {
   color: var(--oro);
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.05rem;
   white-space: nowrap;
+}
+
+.btn-add-compact {
+  padding: 8px 18px;
+  background: transparent;
+  color: var(--blanco);
+  border: 1px solid var(--rojo);
+  border-radius: 20px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+.btn-add-compact:hover {
+  background: var(--rojo);
+  box-shadow: 0 4px 12px rgba(200, 16, 46, 0.4);
 }
 
 /* ============================================================
@@ -961,9 +1128,65 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.2; }
   .hamburger { display: flex; }
 
   .footer-grid { grid-template-columns: 1fr; }
+
+  /* Navegación táctil fluida para móvil en tarjetas NFC */
+  .menu-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding: 6px 18px 14px;
+    margin: 0 -24px 34px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .menu-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tab-btn {
+    flex-shrink: 0;
+  }
 }
 
 @media (max-width: 480px) {
-  .hero-actions { flex-direction: column; }
-  .btn { text-align: center; }
+  .hero-pagoda-wrapper {
+    margin-bottom: 16px;
+  }
+
+  .pagoda-svg {
+    width: 120px;
+    height: 130px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .btn {
+    text-align: center;
+    width: 100%;
+  }
+
+  .dish-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .menu-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 16px;
+  }
+
+  .menu-item-action {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .category-title-wrap h3 {
+    font-size: 1.18rem;
+  }
 }
