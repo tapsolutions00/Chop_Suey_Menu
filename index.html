@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chop Suey Internacional | Menú Digital</title>
+  <meta name="description" content="Chop Suey Internacional - Auténtica comida china e internacional. Explora nuestro menú digital." />
+  <link rel="icon" type="image/png" href="assets/img/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ============ PRELOADER ============ -->
+  <div id="preloader">
+    <div class="preloader-content">
+      <img src="assets/img/logo.png" alt="Chop Suey Internacional" class="preloader-logo" />
+      <p class="preloader-text">CHOP SUEY <span>INTERNACIONAL</span></p>
+      <div class="preloader-bar"><div class="preloader-bar-fill"></div></div>
+    </div>
+    <div class="drip-container">
+      <div class="drip"></div>
+      <div class="drip"></div>
+      <div class="drip"></div>
+      <div class="drip"></div>
+      <div class="drip"></div>
+      <div class="drip"></div>
+      <div class="drip"></div>
+      <div class="drip"></div>
+    </div>
+  </div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="#inicio" class="brand">
+        <img src="assets/img/logo.png" alt="Logo Chop Suey" class="brand-logo" />
+        <div class="brand-text">
+          <span class="brand-name">CHOP SUEY</span>
+          <span class="brand-sub">INTERNACIONAL</span>
+        </div>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="#inicio">Inicio</a>
+        <a href="#especialidades">Especialidades</a>
+        <a href="#menu">Menú</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto" class="nav-cta">Pedir Ahora</a>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="inicio">
+    <div class="hero-overlay"></div>
+    <div class="hero-glow"></div>
+    <div class="container hero-content">
+      <p class="hero-kicker">Sabor auténtico desde nuestra cocina</p>
+      <h1 class="hero-title">Comida China e Internacional <span>que enamora</span></h1>
+      <p class="hero-desc">Wok a fuego alto, ingredientes frescos y recetas tradicionales. Descubre por qué somos el favorito de Nicaragua.</p>
+      <div class="hero-actions">
+        <a href="#especialidades" class="btn btn-primary">Ver Especialidades</a>
+        <a href="#menu" class="btn btn-outline">Explorar Menú Completo</a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span></span>
+      <p>Desliza</p>
+    </div>
+  </section>
+
+  <!-- ============ ESPECIALIDADES (Platillos con animación de desglose) ============ -->
+  <section class="specialties" id="especialidades">
+    <div class="container">
+      <div class="section-heading">
+        <p class="section-kicker">Lo más pedido</p>
+        <h2>Nuestras Especialidades</h2>
+        <p class="section-desc">Pasa el cursor sobre cada platillo y descubre cada ingrediente en acción.</p>
+      </div>
+
+      <div class="dish-grid">
+
+        <!-- PLATILLO 1 -->
+        <article class="dish-card" data-dish="1">
+          <div class="dish-media">
+            <div class="steam"><span></span><span></span><span></span></div>
+            <div class="dish-layers">
+              <img class="layer layer-base" src="assets/img/platillos/tallarin-camaron.jpg" alt="Tallarín salteado con camarones" />
+              <img class="layer layer-top" src="assets/img/platillos/tallarin-camaron-top.png" alt="" />
+              <img class="layer layer-shrimp" src="assets/img/platillos/tallarin-camaron-camarones.png" alt="" />
+              <img class="layer layer-veggies" src="assets/img/platillos/tallarin-camaron-vegetales.png" alt="" />
+            </div>
+            <span class="dish-badge">Más pedido</span>
+          </div>
+          <div class="dish-info">
+            <div class="dish-title-row">
+              <h3>Tallarín Saltado con Camarones</h3>
+              <span class="dish-price">C$ 285</span>
+            </div>
+            <p class="dish-desc">Fideos de trigo salteados al wok con camarones jumbo, zanahoria, repollo y un toque de salsa de soya tostada.</p>
+            <button class="btn-add">Agregar al pedido</button>
+          </div>
+        </article>
+
+        <!-- PLATILLO 2 -->
+        <article class="dish-card" data-dish="2">
+          <div class="dish-media">
+            <div class="steam"><span></span><span></span><span></span></div>
+            <div class="dish-layers">
+              <img class="layer layer-base" src="assets/img/platillos/chowmein-mixto.jpg" alt="Chow Mein mixto" />
+              <img class="layer layer-top" src="assets/img/platillos/chowmein-mixto-top.png" alt="" />
+              <img class="layer layer-shrimp" src="assets/img/platillos/chowmein-mixto-carne.png" alt="" />
+              <img class="layer layer-veggies" src="assets/img/platillos/chowmein-mixto-vegetales.png" alt="" />
+            </div>
+            <span class="dish-badge dish-badge-spicy">Picante</span>
+          </div>
+          <div class="dish-info">
+            <div class="dish-title-row">
+              <h3>Chow Mein Mixto</h3>
+              <span class="dish-price">C$ 310</span>
+            </div>
+            <p class="dish-desc">Combinación de pollo, cerdo y camarón salteados con fideos crocantes, pimientos y zanahoria en salsa especial de la casa.</p>
+            <button class="btn-add">Agregar al pedido</button>
+          </div>
+        </article>
+
+        <!-- PLATILLO 3 -->
+        <article class="dish-card" data-dish="3">
+          <div class="dish-media">
+            <div class="steam"><span></span><span></span><span></span></div>
+            <div class="dish-layers">
+              <img class="layer layer-base" src="assets/img/platillos/arroz-frito.jpg" alt="Arroz frito especial" />
+              <img class="layer layer-top" src="assets/img/platillos/arroz-frito-top.png" alt="" />
+              <img class="layer layer-shrimp" src="assets/img/platillos/arroz-frito-camarones.png" alt="" />
+              <img class="layer layer-veggies" src="assets/img/platillos/arroz-frito-vegetales.png" alt="" />
+            </div>
+            <span class="dish-badge">Recomendado</span>
+          </div>
+          <div class="dish-info">
+            <div class="dish-title-row">
+              <h3>Arroz Frito Especial</h3>
+              <span class="dish-price">C$ 260</span>
+            </div>
+            <p class="dish-desc">Arroz salteado al wok con huevo, camarón, cerdo asado y vegetales frescos picados finamente, sazonado al estilo cantonés.</p>
+            <button class="btn-add">Agregar al pedido</button>
+          </div>
+        </article>
+
+        <!-- PLATILLO 4 -->
+        <article class="dish-card" data-dish="4">
+          <div class="dish-media">
+            <div class="steam"><span></span><span></span><span></span></div>
+            <div class="dish-layers">
+              <img class="layer layer-base" src="assets/img/platillos/tallarin-pollo.jpg" alt="Tallarín con pollo y vegetales" />
+              <img class="layer layer-top" src="assets/img/platillos/tallarin-pollo-top.png" alt="" />
+              <img class="layer layer-shrimp" src="assets/img/platillos/tallarin-pollo-carne.png" alt="" />
+              <img class="layer layer-veggies" src="assets/img/platillos/tallarin-pollo-vegetales.png" alt="" />
+            </div>
+            <span class="dish-badge dish-badge-new">Nuevo</span>
+          </div>
+          <div class="dish-info">
+            <div class="dish-title-row">
+              <h3>Tallarín de Pollo Cantonés</h3>
+              <span class="dish-price">C$ 275</span>
+            </div>
+            <p class="dish-desc">Fideos suaves salteados con tiras de pollo marinado, zanahoria, apio y brotes de soya en salsa cantonesa ligera.</p>
+            <button class="btn-add">Agregar al pedido</button>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MENÚ COMPLETO ============ -->
+  <section class="menu-section" id="menu">
+    <div class="container">
+      <div class="section-heading light">
+        <p class="section-kicker">Carta completa</p>
+        <h2>Nuestro Menú</h2>
+        <p class="section-desc">Filtra por categoría y encuentra tu platillo favorito.</p>
+      </div>
+
+      <div class="menu-tabs" id="menuTabs">
+        <button class="tab-btn active" data-tab="entradas">Entradas</button>
+        <button class="tab-btn" data-tab="arroces">Arroces</button>
+        <button class="tab-btn" data-tab="tallarines">Tallarines</button>
+        <button class="tab-btn" data-tab="bebidas">Bebidas</button>
+      </div>
+
+      <div class="menu-panels">
+
+        <div class="menu-panel active" data-panel="entradas">
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <h4>Rollitos Primavera <span>(4 uds)</span></h4>
+              <p>Crujientes rollitos rellenos de repollo, zanahoria y vermicelli, servidos con salsa agridulce.</p>
+            </div>
+            <span class="menu-item-price">C$ 120</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <h4>Sopa Wantán</h4>
+              <p>Caldo aromático con wantanes rellenos de cerdo y camarón, cebollín fresco.</p>
+            </div>
+            <span class="menu-item-price">C$ 140</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <h4>Alitas Agridulces</h4>
+              <p>Alitas de pollo fritas bañadas en salsa agridulce casera y ajonjolí tostado.</p>
+            </div>
+            <span class="menu-item-price">C$ 175</span>
+          </div>
+        </div>
+
+        <div class="menu-panel" data-panel="arroces">
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <h4>Arroz Frito Especial</h4>
+              <p>Huevo, camarón, cerdo asado y vegetales salteados al wok.</p>
+            </div>
+            <span class="menu-item-price">C$ 260</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <h4>Arroz Frito de Pollo</h4>
+              <p>Arroz salteado con pollo marinado, huevo y vegetales frescos.</p>
+            </div>
+            <span class="menu-item-price">C$ 220</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <h4>Arroz Chop Suey</h4>
+              <p>Arroz blanco acompañado de vegetales salteados y proteína a elección en salsa espesa.</p>
+            </div>
+            <span class="menu-item-price">C$ 245</span>
+          </div>
+        </div>
+
+        <div class="menu-panel" data-panel="tallarines">
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <h4>Tallarín Saltado con Camarones</h4>
+              <p>Fideos de trigo salteados al wok con camarones jumbo y vegetales.</p>
+            </div>
+            <span class="menu-item-price">C$ 285</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <h4>Chow Mein Mixto</h4>
+              <p>Pollo, cerdo y camarón con fideos crocantes en salsa especial.</p>
+            </div>
+            <span class="menu-item-price">C$ 310</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <h4>Tallarín de Pollo Cantonés</h4>
+              <p>Fideos suaves con pollo marinado y vegetales en salsa cantonesa.</p>
+            </div>
+            <span class="menu-item-price">C$ 275</span>
+          </div>
+        </div>
+
+        <div class="menu-panel" data-panel="bebidas">
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <h4>Té Verde Helado</h4>
+              <p>Refrescante té verde servido con hielo y un toque de limón.</p>
+            </div>
+            <span class="menu-item-price">C$ 60</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <h4>Limonada de Jengibre</h4>
+              <p>Bebida cítrica con un toque picante de jengibre fresco.</p>
+            </div>
+            <span class="menu-item-price">C$ 65</span>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <h4>Gaseosa</h4>
+              <p>Variedad de gaseosas frías (Coca-Cola, Sprite, Fanta).</p>
+            </div>
+            <span class="menu-item-price">C$ 45</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NOSOTROS ============ -->
+  <section class="about" id="nosotros">
+    <div class="container about-grid">
+      <div class="about-media">
+        <img src="assets/img/logo.png" alt="Chop Suey Internacional" class="about-logo" />
+      </div>
+      <div class="about-text">
+        <p class="section-kicker">Nuestra historia</p>
+        <h2>Tradición China, Sazón Nicaragüense</h2>
+        <p>En Chop Suey Internacional combinamos técnicas culinarias tradicionales chinas con ingredientes frescos locales para ofrecerte una experiencia única. Cada platillo se prepara al momento, con el wok a fuego alto, tal como manda la receta original.</p>
+        <div class="about-stats">
+          <div class="stat">
+            <span class="stat-num">15+</span>
+            <span class="stat-label">Años de experiencia</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">40+</span>
+            <span class="stat-label">Platillos en el menú</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">100%</span>
+            <span class="stat-label">Ingredientes frescos</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACTO / FOOTER ============ -->
+  <footer class="footer" id="contacto">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="assets/img/logo.png" alt="Chop Suey Internacional" />
+        <p>Comida china e internacional preparada con pasión.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Contacto</h5>
+        <p>📍 Managua, Nicaragua</p>
+        <p>📞 +505 8888 0000</p>
+        <p>✉️ pedidos@chopsueyinternacional.com</p>
+      </div>
+      <div class="footer-col">
+        <h5>Horario</h5>
+        <p>Lunes a Domingo</p>
+        <p>11:00 am — 9:30 pm</p>
+      </div>
+      <div class="footer-col">
+        <h5>Síguenos</h5>
+        <div class="social-links">
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
+          <a href="#">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Chop Suey Internacional. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <a href="#contacto" class="whatsapp-float" aria-label="Pedir por WhatsApp">🥡</a>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
